@@ -1,0 +1,98 @@
+agent:
+  name: "Pharma Competitive Landscape Agent"
+  version: "1.0.0"
+  description: "Multi-agent system for pharmaceutical competitive intelligence"
+
+competitors:
+  # Add pharmaceutical companies to monitor
+  - "Pfizer"
+  - "Moderna"
+  - "Johnson & Johnson"
+  - "Novartis"
+  - "Roche"
+  - "AstraZeneca"
+  - "Merck"
+  - "GSK"
+  - "Sanofi"
+  - "BioNTech"
+
+therapeutic_areas:
+  # Focus areas for monitoring
+  - "Oncology"
+  - "Vaccines"
+  - "Rare Diseases"
+  - "Immunology"
+  - "Neuroscience"
+  - "Cardiovascular"
+
+monitoring:
+  update_interval: "24h"  # How often to check for updates
+  data_retention_days: 365
+  enable_real_time: true
+
+tools:
+  google_search:
+    enabled: true
+    max_results: 10
+  
+  code_execution:
+    enabled: true
+    timeout_seconds: 30
+  
+  mcp:
+    enabled: true
+    server_url: "http://localhost:8000"
+  
+  openapi:
+    fda:
+      enabled: true
+      base_url: "https://api.fda.gov"
+    clinicaltrials:
+      enabled: true
+      base_url: "https://clinicaltrials.gov/api/v2"
+
+memory:
+  session_service:
+    type: "InMemory"  # or "Redis"
+    max_sessions: 100
+  
+  memory_bank:
+    enabled: true
+    storage_type: "sqlite"  # or "postgresql", "redis"
+    db_path: "./data/memory_bank.db"
+  
+  context_compaction:
+    enabled: true
+    max_context_size: 100000
+    compression_ratio: 0.3
+
+observability:
+  logging:
+    level: "INFO"
+    format: "json"
+    output: "./logs/agent.log"
+  
+  tracing:
+    enabled: true
+    provider: "opentelemetry"
+    sample_rate: 1.0
+  
+  metrics:
+    enabled: true
+    port: 9090
+    path: "/metrics"
+
+evaluation:
+  enabled: true
+  metrics:
+    - "accuracy"
+    - "completeness"
+    - "timeliness"
+    - "relevance"
+  test_cases_path: "./tests/evaluation_cases.yaml"
+
+a2a:
+  enabled: true
+  protocol_version: "1.0"
+  discovery_enabled: true
+  peer_agents: []

@@ -1,0 +1,47 @@
+# Core Google Agent Kit
+google-generativeai>=0.8.0
+google-aistudio>=0.1.0
+
+# MCP (Model Context Protocol)
+mcp>=0.1.0
+httpx>=0.25.0
+
+# OpenAPI Integration
+openapi-core>=0.18.0
+requests>=2.31.0
+
+# Observability
+opentelemetry-api>=1.21.0
+opentelemetry-sdk>=1.21.0
+opentelemetry-instrumentation>=0.42b0
+prometheus-client>=0.19.0
+
+# Data Processing
+pandas>=2.1.0
+numpy>=1.24.0
+pydantic>=2.5.0
+
+# Configuration & Environment
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# Database & Storage (for Memory Bank)
+sqlalchemy>=2.0.0
+redis>=5.0.0
+
+# Testing & Evaluation
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Async Support
+aiohttp>=3.9.0
+asyncio>=3.4.3
+
+# CLI
+click>=8.1.0
+rich>=13.7.0
+
+# Utilities
+python-dateutil>=2.8.2
+beautifulsoup4>=4.12.0
+lxml>=4.9.0

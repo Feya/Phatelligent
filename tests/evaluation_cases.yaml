@@ -1,0 +1,58 @@
+# Test cases for agent evaluation
+
+test_cases:
+  - id: "test_001"
+    name: "Basic competitor analysis"
+    query: "Analyze Pfizer and Moderna in vaccine space"
+    expected_competitors: ["Pfizer", "Moderna"]
+    expected_area: "Vaccines"
+    min_insights: 3
+    min_recommendations: 2
+    
+  - id: "test_002"
+    name: "Pipeline analysis"
+    query: "What drugs are in Phase 3 development?"
+    expected_sections: ["pipeline", "clinical_trials"]
+    min_completeness: 0.7
+    
+  - id: "test_003"
+    name: "Trend identification"
+    query: "What are emerging trends in oncology?"
+    expected_sections: ["trends", "opportunities"]
+    min_relevance: 0.8
+    
+  - id: "test_004"
+    name: "Multi-competitor comparison"
+    query: "Compare Pfizer, Moderna, J&J, and AstraZeneca"
+    expected_competitors: ["Pfizer", "Moderna", "J&J", "AstraZeneca"]
+    min_accuracy: 0.75
+    
+  - id: "test_005"
+    name: "Specific therapeutic area"
+    query: "Analyze rare disease treatments"
+    expected_area: "Rare Diseases"
+    min_completeness: 0.8
+
+evaluation_criteria:
+  accuracy:
+    weight: 0.3
+    min_score: 0.7
+    
+  completeness:
+    weight: 0.25
+    min_score: 0.7
+    
+  timeliness:
+    weight: 0.2
+    min_score: 0.6
+    
+  relevance:
+    weight: 0.25
+    min_score: 0.75
+
+grading_scale:
+  A: 0.9
+  B: 0.8
+  C: 0.7
+  D: 0.6
+  F: 0.0
