@@ -7,8 +7,7 @@ import logging
 from typing import List, Dict, Any
 from datetime import datetime
 
-from google import genai
-from google.genai import types
+import google.generativeai as genai
 
 from ..observability.tracing import trace_agent_execution
 

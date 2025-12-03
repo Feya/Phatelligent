@@ -9,8 +9,7 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime
 import yaml
 
-from google import genai
-from google.genai import types
+import google.generativeai as genai
 
 from .agents.research_agent import ResearchAgent
 from .agents.analysis_agent import AnalysisAgent

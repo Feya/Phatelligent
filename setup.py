@@ -12,7 +12,7 @@ setup(
         for line in open("requirements.txt").readlines()
         if line.strip() and not line.startswith("#")
     ],
-    python_requires=">=3.10",
+    python_requires=">=3.9",
     entry_points={
         "console_scripts": [
             "pharma-agent=pharma_agent.cli:main",
@@ -22,6 +22,7 @@ setup(
         "Development Status :: 4 - Beta",
         "Intended Audience :: Healthcare Industry",
         "Topic :: Scientific/Engineering :: Medical Science Apps.",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",

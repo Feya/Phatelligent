@@ -1,4 +1,4 @@
-# Quick Start Guide
+sourc# Quick Start Guide
 
 Welcome to the Pharmaceutical Competitive Landscape Agent! This guide will get you up and running in minutes.
 

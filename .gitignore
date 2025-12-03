@@ -49,6 +49,11 @@ logs/
 *.sqlite3
 data/
 
+# Test scripts
+test_api.py
+test_direct_api.py
+list_models.py
+
 # Testing
 .pytest_cache/
 .coverage

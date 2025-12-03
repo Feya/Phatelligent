@@ -7,8 +7,8 @@ import logging
 from typing import List, Dict, Any, Optional
 from datetime import datetime
 
-from google import genai
-from google.genai import types
+import google.generativeai as genai
+from google.generativeai import types
 
 from ..tools.google_search import GoogleSearchTool
 from ..tools.openapi_tools import FDAApiTool, ClinicalTrialsTool
